@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+   <title>Raw Basic</title>
+   <link rel="stylesheet" href="Css.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+<body>
+  <header>
+    <a href="index.html"><img class="logo" src="imagenes/logo.png"></a>
+    <!-- Botón hamburguesa -->
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="politicas.html">Políticas</a></li>
+  
+  </ul>
+  <ul class="nav-links">
+    <li><a href="inicio.html">Inicio</a></li>
+    <li><a href="tienda.html">Tienda</a></li>
+    <li><a href="contacto.html" class="active">Contacto</a></li>
+    <li><a href="politicas.html">Políticas</a></li>
+  </ul>
+  </header>
+  <main>
+    <h2 style="text-align:center;">Contacto</h2>
+
+    <form action="#" method="post" style="max-width: 600px; margin: auto;">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="ej.: María Perez" required style="width: 100%; padding: 10px; margin-bottom: 20px;">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="ej.: tuemail@email.com" required style="width: 100%; padding: 10px; margin-bottom: 20px;">
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="ej.: 1123445567" required style="width: 100%; padding: 10px; margin-bottom: 20px;">
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" placeholder="ej.: Tu mensaje" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 20px;"></textarea>
+
+      
+
+      <button type="submit" style="width: 100%; background-color: #333; color: white; padding: 15px; font-size: 16px; border: none;">Enviar</button>
+    </form>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.nav-links');
+      menu.classList.toggle('show');
+    }
+  </script>
+<!-- ... tu formulario de contacto va acá -->
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-socials">
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+    </div>
+    <ul class="footer-links">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="politicas.html">Políticas</a></li>
+    </ul>
+    <form class="newsletter">
+      <input type="email" placeholder="Suscribite al newsletter..." required>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div class="footer-contact">
+    <p>Lola Bello</p>
+    <p>1144037958</p>
+    <p><a href="mailto:rawbasic@gmail.com">rawbasic@gmail.com</a></p>
+    <p>Los Crisantemos 392, Del Viso (Edificio SKYGLASS 3, piso 3, oficina 303).</p>
+  </div>
+
+  <div class="footer-payments">
+    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+    <i class="fa fa-credit-card" aria-hidden="true"></i>
+    <i class="fa fa-money" aria-hidden="true"></i>
+    <i class="fa fa-university" aria-hidden="true"></i>
+  </div>
+</footer>
+
+</body>
+
+</html>
