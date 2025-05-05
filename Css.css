@@ -6,9 +6,15 @@ body {background-color: rgb(255, 255, 255); font-family: 'Times New Roman', Time
 header{background-color: rgb(194, 193, 193); color: black; padding: 40px; height: 40px; text-align: left;} 
 main{background-color: rgb(255, 255, 255); color: black; padding: 80px;} 
 footer{background-color: rgb(255, 255, 255); color: black; padding: 80px;}
-.logo {width: 100px;}
 .imagen {width: 80%;display: block;margin: auto; }
-.logo {width: 150px;}
+.logo {
+  width: 150px;
+  transition: width 0.3s ease;
+}
+
+.logo:hover {
+  width: 170px; /* 150px + 20px */
+}
 .banner {width: 300px;}
 .cajacontenedora {
   display: flex;
@@ -244,6 +250,7 @@ ul {
     gap: 40px;
     margin: 40px auto;
     max-width: 1200px;
+  
   }
   
   .producto {
@@ -256,7 +263,13 @@ ul {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease;
   }
+  
+  .producto img:hover {
+    transform: scale(1.05); /* Aumenta la imagen en un 5% */
+  }
+  
   
   .producto p {
     margin: 8px 0;
@@ -265,10 +278,11 @@ ul {
   .producto a {
     display: inline-block;
     margin-top: 8px;
-    text-decoration: underline;
-    color: black;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
     
   }
+
   
   @media (max-width: 768px) {
     .producto {
@@ -311,17 +325,17 @@ ul {
     margin: 8px 0;
   }
   
-  .boton-comprar {
+  .botoncomprar {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
     background-color: rgb(194, 193, 193);
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
+    color: white; /* Ahora el texto será blanco */
+    text-decoration: none; /* Sin subrayado */
     border-radius: 5px;
     transition: background-color 0.3s;
-  }
+}
+
   
   .boton-comprar:hover {
     background-color: #a9a9a9;
@@ -332,4 +346,48 @@ ul {
       width: 80%;
     }
   }
+  .carrusel {
+    position: relative;
+    width: 60%;
+    margin: 50px auto;
+    overflow: hidden;
+  }
   
+  .carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carrusel-imagenes img {
+    width: 50%; /* <-- cada imagen ocupa todo el carrusel */
+    flex-shrink: 0;
+    object-fit: cover; /* <-- para que se ajuste bien */
+  }
+  
+  .carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 100;
+    border-radius: 10%;
+    transition: transform 0.3s ease; /* Suaviza la animación */
+  }
+  
+  .carrusel-btn:hover {
+    transform: translateY(-50%) scale(1.2); /* Mantiene la posición y agranda */
+  }
+  
+  
+  .izquierda {
+    left: 10px;
+  }
+  
+  .derecha {
+    right: 10px;
+  }
