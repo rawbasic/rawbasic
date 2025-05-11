@@ -2,11 +2,16 @@
 html, body{
   overflow-x: hidden;
 }
+/* Estilo general del cuerpo: fondo blanco y tipografía serif */
 body {background-color: rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif;}
-header{background-color: rgb(194, 193, 193); color: black; padding: 40px; height: 40px; text-align: left;} 
+/* Estilo del encabezado: color de fondo y alineación del texto */
+header{background-color: rgb(194, 193, 193); color: black; padding: 40px; height: 40px; text-align: left;}
+/* Estilo del contenido principal */ 
 main{background-color: rgb(255, 255, 255); color: black; padding: 80px;} 
+/* Estilo del pie de página */
 footer{background-color: rgb(255, 255, 255); color: black; padding: 80px;}
 .imagen {width: 80%;display: block;margin: auto; }
+/* Tamaño del logo con animación al pasar el mouse */
 .logo {
   width: 150px;
   transition: width 0.3s ease;
@@ -69,6 +74,7 @@ ul {
     justify-content: flex-end; /* Esto lo alinea a la derecha */
     gap: 2rem;
   }
+  /* Botón hamburguesa en versión móvil */
   .menu-toggle {
     display: none;
     background: none;
@@ -81,7 +87,7 @@ ul {
     z-index: 1000;
     cursor: pointer;
   }
-  
+  /* Estilos responsivos para adaptar en pantallas chicas */
   @media (max-width: 768px) {
     .menu-toggle {
       display: block;
