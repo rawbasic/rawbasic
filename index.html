@@ -17,7 +17,6 @@
     <i class="fa fa-bars"></i>
   </button>
     <ul class="nav-links">
-    <li><a href="index.html">Inicio</a></li>
     <li><a href="tienda.html">Tienda</a></li>
     <li><a href="contacto.html">Contacto</a></li>
     <li><a href="politicas.html">Políticas</a></li>
@@ -137,14 +136,14 @@
       <i class="fa fa-pinterest-p" aria-hidden="true"></i>
     </div>
     <ul class="footer-links">
-      <li><a href="#">Inicio</a></li>
+      
       <li><a href="#">Tienda</a></li>
       <li><a href="#">Contacto</a></li>
       <li><a href="#">Políticas</a></li>
     </ul>
   <!-- Lista de enlaces de navegación -->
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="index.html" class="active">
       <li><a href="tienda.html">Tienda</a></li>
       <li><a href="contacto.html">Contacto</a></li>
       <li><a href="politicas.html">Políticas</a></li>
@@ -170,4 +169,13 @@
     <i class="fa fa-university" aria-hidden="true"></i>
   </div>
 </footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.nav-links');
+    menu.classList.toggle('show');
+  }
+</script>
+
+</body>
 </html>
