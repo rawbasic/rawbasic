@@ -64,8 +64,15 @@ main section {
   main p {
     text-align: left; /* asegura que el texto quede alineado a la izquierda */
   }
+ .anuncio {
+  width: 728px;
+  height: 90px;
+  display: block;
+  margin: auto 
+} 
   
-  
+.anuncio { 
+ margin-bottom: 40px; /* o más si querés más separación */}
 ul {
     list-style: none;
     margin: 0;
@@ -134,20 +141,26 @@ ul {
       display: block;
     }
   
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      background-color: #c2c1c1;
-      position: absolute;
-      top: 80px;
-      right: 10px;
-      width: 200px;
-      padding: 20px;
-    }
-  
-    .nav-links.show {
-      display: flex;
-    }
+    @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #c2c1c1;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
   
     /* Ocultar barra de búsqueda en móviles */
     .barra-busqueda {
@@ -346,10 +359,15 @@ ul {
   }
   
   @media (max-width: 768px) {
-    .producto {
-      width: 80%;
-    }
+  .producto {
+    width: 45%; /* Dos productos por fila */
   }
+
+  .galeria {
+    gap: 20px; /* espacio entre productos */
+  }
+}
+
   .carrusel {
     position: relative;
     width: 60%;
@@ -390,3 +408,32 @@ ul {
   .derecha {
     right: 10px;
   }
+.talles {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start; /* alineado a la izquierda */
+}
+
+.talle {
+  padding: 5px 12px;
+  background-color: rgb(169, 168, 168);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  user-select: none;
+}
+
+.talle:hover {
+  background-color: rgb(194, 193, 193);
+  transform: scale(1.05);
+}
+
+.talle.selected {
+  background-color: #444;
+  color: white;
+}
