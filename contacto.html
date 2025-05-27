@@ -50,14 +50,40 @@
       <button type="submit" class="botonenviar">Enviar</button>
     </form>
 
-    <script>
-        document.getElementById('miFormulario').addEventListener('submit', function(event) {
-          alert('¡Gracias por tu respuesta!');
-          // El formulario se enviará normalmente después del alert
-        });
-      </script>
-
   </main>
+
+  <div id="mensaje-exito" class="modal">
+  <div class="modal-contenido">
+    <p>¡Gracias por completar el formulario!</p>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+
+
+  <script>
+  document.getElementById('miFormulario').addEventListener('submit', function(event) {
+    event.preventDefault(); // Detiene el envío
+
+    // Verificar que todos los campos estén completos
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    if (nombre && email && telefono && mensaje) {
+      document.getElementById('mensaje-exito').style.display = 'block';
+      this.reset(); // Limpia el formulario
+    } else {
+      alert('Por favor, completá todos los campos.');
+    }
+  });
+
+  function cerrarModal() {
+    document.getElementById('mensaje-exito').style.display = 'none';
+  }
+</script>
+
+
 
   <script>
     function toggleMenu() {
