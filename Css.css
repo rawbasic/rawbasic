@@ -437,3 +437,26 @@ ul {
   background-color: #444;
   color: white;
 }
+@media (max-width: 768px) {
+  .anuncio {
+    width: 300px;
+    height: 600px;
+    display: block;
+    margin: auto;
+    overflow-y: hidden;
+  }
+}
+.botonenviar {
+  width: 100%;
+  background-color: rgb(194, 193, 193);
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonenviar:hover {
+  background-color: rgb(160, 160, 160); /* Color al pasar el mouse */
+}
