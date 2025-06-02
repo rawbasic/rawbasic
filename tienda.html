@@ -5,8 +5,15 @@
    <title>Raw Basic</title>
    <link rel="stylesheet" href="Css.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
   </head>
 <body>
+
+  <link href="ruta/lightbox.min.css" rel="stylesheet">
+
   <header>
     <a href="index.html"><img class="logo" src="imagenes/logo.png"></a>
     <!-- Botón hamburguesa -->
@@ -29,6 +36,8 @@
   
   </header>
 <main>
+<h2>Tienda</h2>
+
   <div class="galeria">
     <div class="producto">
       <img src="imagenes/destacado1-min.png" alt="Remeron Paris">
@@ -232,6 +241,39 @@
       <a href="contacto.html"class="botoncomprar">Comprar</a>
     </div>
   </div>
+
+<h2>Nuestra Comunidad</h2>
+  <div class="galeria-lightbox">
+    <a href="imagenes/descarga (1)-min.jpg" data-lightbox="galeria">
+      <img src="imagenes/descarga-min(1)cuadrado.jpeg" alt="Imagen 1" width="90" height="90">
+    </a>
+    <a href="imagenes/descarga (2)-min.jpg" data-lightbox="galeria">
+      <img src="imagenes/descarga-min(2)cuadrado.jpeg" alt="Imagen 2" width="90" height="90">
+    </a>
+    <a href="imagenes/descarga (3)-min.jpg" data-lightbox="galeria">
+      <img src="imagenes/descarga-min(3)cuadrado.jpeg" alt="Imagen 3" width="90" height="90">
+    </a>
+    <a href="imagenes/descarga (4)-min.jpg" data-lightbox="galeria">
+      <img src="imagenes/descarga-min(4)cuadrado.jpeg" alt="Imagen 4" width="90" height="90">
+    </a>
+    <a href="imagenes/descarga (5)-min.jpg" data-lightbox="galeria">
+      <img src="imagenes/descarga-min(5)cuadrado.jpeg" alt="Imagen 5" width="90" height="90">
+    </a>
+    <a href="imagenes/descarga-min (6).jpg" data-lightbox="galeria">
+      <img src="imagenes/descarga-min(6)cuadrado.jpeg" alt="Imagen 6" width="90" height="90">
+    </a>
+    <a href="imagenes/descarga-min (7).jpg" data-lightbox="galeria">
+      <img src="imagenes/descarga-min(7)cuadrado.jpeg" alt="Imagen 7" width="90" height="90">
+    </a>
+    <a href="imagenes/descarga-min(8).jpg" data-lightbox="galeria">
+      <img src="imagenes/descarga-min(8)cuadrado.jpeg" alt="Imagen 8" width="90" height="90">
+    </a>
+  </div>
+   <!-- Tu galería de productos sigue abajo -->
+  <div class="galeria">
+    <!-- ... productos existentes ... -->
+  </div>
+
 </main>
 <footer class="footer">
   <div class="footer-top">
@@ -266,6 +308,14 @@
     <i class="fa fa-university" aria-hidden="true"></i>
   </div>
 </footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.nav-links');
+    menu.classList.toggle('show');
+  }
+</script>
+
 <script>
   // Script para marcar el talle seleccionado
   document.querySelectorAll('.talle').forEach(talle => {
@@ -284,6 +334,8 @@
     menu.classList.toggle('show');
   }
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 
 </body>
 </html>
