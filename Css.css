@@ -521,4 +521,16 @@ ul {
         transform: scale(1.1);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
       }
-     
+@media (max-width: 768px) {
+  .contenedor-anuncio {
+    padding: 50px 5px; /* ajustá los valores según lo que necesites */
+  }
+
+  .anuncio {
+    width: 100%;
+    height: 600px;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+  }
+}
